@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Concrete Strength Prediction</title>
+    <style>
+      body {
+        background: url({{url_for('static',filename='cement-factory-image.jpg')}}) no-repeat center center
+          fixed;
+        background-size: cover;
+      }
+
+      .container {
+        border: 2px solid black;
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="number"] {
+        padding: 8px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Concrete Strength Prediction</h1>
+      <form method="post" action="/" >
+        <label for="cement">Cement:</label>
+        <input type="number" id="cement" name="cement" required />
+
+        <label for="blast_furnace_slag">Blast Furnace:</label>
+        <input type="number" id="blast_furnace_slag" name="blast_furnace_slag" required />
+
+        <label for="fly_ash">Fly Ash:</label>
+        <input type="number" id="fly_ash" name="fly_ash" required />
+
+        <label for="water">Water:</label>
+        <input type="number" id="water" name="water" required />
+
+        <label for="super_plasticizer">Super Plasticizer:</label>
+        <input
+          type="number"
+          id="super_plasticizer"
+          name="super_plasticizer"
+          required
+        />
+
+        <label for="coarse_aggregate">Coarse Aggregate:</label>
+        <input
+          type="number"
+          id="coarse_aggregate"
+          name="coarse_aggregate"
+          required
+        />
+
+        <label for="fine_aggregate">Fine Aggregate:</label>
+        <input
+          type="number"
+          id="fine_aggregate"
+          name="fine_aggregate"
+          required
+        />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <input type="submit" value="Predict Strength" />
+      </form>
+    </div>
+  </body>
+</html>
